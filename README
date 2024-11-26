@@ -1,0 +1,77 @@
+Author: Leo Kim
+Date: 2/6/22
+
+Purpose
+    The purpose of this program is the declaration and implementation of the
+    CharLinkedList class. The CharLinkedList class represents a doubly linked 
+    list of char variables. With the member functions I have added, one can 
+    perform many different alterations to the CharLinkedList, such as 
+    additions, concatenations, subtractions and more. The CharLinkedList class 
+    is now ready for use by anyone in their own sepparate programs.
+
+Files Provided
+    CharLinkedList.h
+        This is the class declaration for the CharLinkedList class which 
+        includes all the member functions and variables, but not the 
+        implementation.
+    CharLinkedList.cpp
+        This is the class implementation for the CharLinkedList class which
+        includes the implementation of all the member functions in the 
+        CharLinkedList class.
+    unit_tests.h
+        This file includes all the unit testing functions I used to test the
+        implementation of the CharLinkedList class.
+
+How to Compile and Run
+    This assignment does not include a written main function to use the 
+    CharLinkedList class. You can compile and run these programs by using the
+    unit testing framework provided. To do this, simply type "unit_test" into
+    the command line and the program will compile and run using the Makefile.
+
+Data Structure Used
+    The data structure used in this program is a doubly linked list. A double 
+    linked list is a list comprised of linked Nodes which each point to the 
+    Node before and after them. A major advantage of a doubly linked list,
+    especially given that I have used a back pointer, is that it is very easy
+    to add to the front and back of the list. Additionally, the doubly linked
+    list does not occupy any unnecessary heap space unlike an array list 
+    sometimes does. A major disadvatage to doubly linked lists are that
+    it takes a lot of work to find an element at a given index in the list.
+    Unlike array lists, elements aren't stored in consecutive slots in the
+    memory and you have to move through the whole list step by step until
+    you reach the desired element.
+
+Testing Details and Explanation
+    In order to test my class implementation, I made use of the unit testing
+    framework provided to us. This meant that every time I implemented a new
+    CharLinkedList member function, I would write multiple corresponding
+    unit testing functions that would test the member function. I wrote
+    testing functions that would test each member function in a variety of
+    different scenarios involving possible edge cases. I would then run the
+    unit testing code and see which tests passed and failed, then make the
+    neccessary changes. In this homework I worked to make my unit tests
+    even more expansive than in the previous homework.
+
+Q1: Which functions in the interface were easier to implement for linked lists
+compared to array lists? Why?
+    popFromFront --> Easier because all you have to do is delete the front node
+    and change the corresponding pointers
+
+    pushAtFront --> Easier because all you have to do is change the front 
+    pointer
+
+Q2: Which functions in the interface were harder to implement for linked lists
+compared to array lists? Why?
+    elementAt --> Harder because with array lists you could just access the
+    item with the index of its location in memory, but with linked lists
+    you had to move through the whole list element by element until you
+    arrived at the correct one.
+
+    replaceAt --> Harder for the same reason.
+
+Q3: If a client had an existing program that uses CharArrayLists, what changes
+would they have to make to their code to switch to CharLinkedLists?
+    Aside from changing which class headers the client included, they would
+    not have to make any changes to their actual code. This is because both
+    classes contain the same public member functions and use abstraction
+    to hide the actual list implimentation from the client.
